@@ -106,6 +106,28 @@
       </div>
     </nav>
     <main class="content">
+
+      <div class="modal fade" id="defaultModalPrimary" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Answer or Add Question</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+            </div>
+            <div class="modal-body m-3">
+              <p class="mb-0">Questions will have title and description</p>
+              <p class="mb-0">Answers will just have title</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="container-fluid p-0">
         <div class="row justify-content-md-center">
           <div class="col-12 col-xl-6">
@@ -185,7 +207,9 @@
                 justify-content: space-between;
                 align-items: center;margin-bottom:1em;">
                 <h1 class="h3">Preview # of questions</h1>
-                <button class="btn btn-primary">Add Question</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#defaultModalPrimary">Add Question</button>
+                </div>
+
               </div>
               <div class="card">
                 <div class="card-header">
@@ -193,7 +217,20 @@
                   justify-content: space-between;
                   align-items: center;">
                   <h1 class="h3" style="margin-bottom:0;">Question Title</h1>
-                  <button class="btn btn-secondary">Add Answers</button>
+                  <div>
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#defaultModalPrimary">Add Answers</button> 
+                
+                    <div class="card-actions float-right ml-3">
+                      <div class="dropdown show">
+                        <a href="#" data-toggle="dropdown" data-display="static">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <br />
                 <p class="card-text">Description: Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -205,18 +242,50 @@
                     <span class="form-check-label">
                     Checked If it's the answer
                     </span>
+                    <div class="card-actions float-right ml-3">
+                      <div class="dropdown show">
+                        <a href="#" data-toggle="dropdown" data-display="static">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                      </div>
+                    </div>
                     </label>
+                    <hr />
                     <label class="form-check">
                     <input class="form-check-input" type="radio" value="option2" name="radios-example">
                     <span class="form-check-label">
                     Option two can be something else and selecting it will deselect option one
                     </span>
+                    <div class="card-actions float-right ml-3">
+                      <div class="dropdown show">
+                        <a href="#" data-toggle="dropdown" data-display="static">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                      </div>
+                    </div>
                     </label>
+                    <hr />
                     <label class="form-check">
                     <input class="form-check-input" type="radio" value="option3" name="radios-example">
                     <span class="form-check-label">
                     Option three is disabled
                     </span>
+                    <div class="card-actions float-right ml-3">
+                      <div class="dropdown show">
+                        <a href="#" data-toggle="dropdown" data-display="static">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                      </div>
+                    </div>
                     </label>
                   </div>
                 </div>
