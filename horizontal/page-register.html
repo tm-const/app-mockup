@@ -31,24 +31,24 @@
       margin-top:50px;
       }
       .container-form-subscriptions {
-      width:70%;
-      display:flex;
-      flex-direction:row;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      color: #666;
-      border:3px solid #d8e0e7;
-      background:#f8f8f9;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #666;
+    border: 3px solid #d8e0e7;
+    background: #fff;
       }
       .subscription-col-1 {
-      width:70%;
+      width:900px;
       padding:3em;
       display:flex;
       flex-direction:column;
       justify-content: center;
       align-items: center;
-      border-right: 3px solid #d8e0e7;
       background:#fff;
       }
       .subscription-col-2 {
@@ -57,6 +57,23 @@
       display:flex;
       flex-direction:column;
       justify-content: center;
+      }
+
+      /*Mobile*/
+      @media all and (max-width:380px) {
+        /* Subscription Forms: */
+        .wrapper-form-registration-subscrition {
+          align-items: flex-start;
+        }
+        .container-form-subscriptions { 
+          border: 0px solid #d8e0e7;
+        }
+        .uk-child-width-1-2 > * {
+          width: 100%;
+        }
+        input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], textarea, select {
+              margin: 0 0;
+        }
       }
     </style>
   </head>
@@ -70,7 +87,6 @@
             <!-- logo -->
             <a href="dashboard.html" class="logo">
             <img src="https://trafficpilot.com/wp-content/uploads/2020/04/TRAFFICPILOT_WHITE_TRANSPARENT.png" alt="">
-            <span> Courseplus</span>
             </a>
             <!-- Main Navigation -->
             <!-- Main Navigation / End -->
@@ -87,7 +103,6 @@
           <div class="mb-4 text-center">
             <h3 class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor</h3>
             <p class="my-2">Lipsum generator: Lorem Ipsum - All the facts Neque porro quisquam</p>
-            <img style="width:50%;" src="https://happy-raman-632eb6.netlify.com/img/smoooth-devices-white.jpg">
           </div>
           <form class="uk-child-width-1-2 uk-grid-small uk-grid" uk-grid="">
             <div class="uk-first-column">
@@ -129,46 +144,6 @@
               </div>
             </div>
           </form>
-        </div>
-        <div class="subscription-col-2">
-          <div class="mb-4 uk-text-center">
-            <br>
-            <h4 class="mb-0">Traffic Pilot</h4>
-            <p class="my-2">Login to manage your account.</p>
-            <hr>
-            <p class="uk-text-bold text-center"> JOIN 10,000+ MEMBERS </p>
-            <div class="course-thumbnail" style="    height: 150px;">
-              <img src="https://www.lever.co/wp-content/uploads/2019/04/internal-interview-questions.jpg" alt="">
-              <a class="play-button-trigger show" href="#trailer-modal" uk-toggle=""> </a>
-            </div>
-            <br>
-            <div class="course-details-info">
-              <ul>
-                <li>
-                  <div class="star-rating"><span class="avg"> 4.9 </span> <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                  </div>
-                </li>
-                <li> <i class="icon-feather-users"></i> 9,200+ Enerolled </li>
-              </ul>
-            </div>
-          </div>
-          <div class="">
-            <p class="uk-text-bold"> This Course Incluce </p>
-            <div class="uk-child-width-1-2 uk-grid-small uk-grid" uk-grid="">
-              <div class="uk-first-column">
-                <span><i class="uil-youtube-alt"></i> 28 hours video</span>
-              </div>
-              <div>
-                <span> <i class="uil-award"></i> Certificate </span>
-              </div>
-              <div class="uk-grid-margin uk-first-column">
-                <span> <i class="uil-file-alt"></i> 12 Article </span>
-              </div>
-              <div class="uk-grid-margin">
-                <span> <i class="uil-video"></i> Watch Offline </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
